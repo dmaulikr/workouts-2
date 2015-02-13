@@ -1,5 +1,17 @@
-<ul>
-  {{#each}}
-    <li>{{this}}</li>
-  {{/each}}
-</ul>
+<div class='row'>
+  <div class='container'>
+    <div class='list-group'>
+      {{#each}}
+        {{#link-to 'workouts.show' this class='list-group-item'}}
+          {{name}}
+        {{/link-to}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='container'>
+    {{outlet}}
+  </div>
+</div>
