@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7A7760A7-F864-4C48-8E07-4DA97AFEA1B3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Workouts</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1C9D3C765A04FA7A1E61E2B1CC1D551B47814EA1</key>
+		<string>github.com:joemsak/workouts.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>cordova/platforms/ios/Workouts.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1C9D3C765A04FA7A1E61E2B1CC1D551B47814EA1</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:joemsak/workouts.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1C9D3C765A04FA7A1E61E2B1CC1D551B47814EA1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1C9D3C765A04FA7A1E61E2B1CC1D551B47814EA1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>workouts</string>
+		</dict>
+	</array>
+</dict>
+</plist>
