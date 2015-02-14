@@ -21,6 +21,10 @@ export default Ember.Route.extend({
       workout.set('newExerciseName', null);
       workout.set('newExerciseDuration', null);
       workout.set('newExerciseWeight', null);
+    },
+
+    updateExercise: function(exercise) {
+      exercise.save();
     }
   },
 });

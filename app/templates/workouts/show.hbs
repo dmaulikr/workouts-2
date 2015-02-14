@@ -9,22 +9,7 @@
     </tr>
   </thead>
   <tbody>
-  {{#each exercises}}
-    <tr>
-      <td>
-        {{input value=name action='updateExerciseName this' on='focus-out'
-                class='form-control'}}
-      </td>
-      <td>
-        {{input value=duration action='updateExerciseDuration this'
-                on='focus-out' class='form-control'}}
-      </td>
-      <td>
-        {{input value=weight action='updateExerciseWeight this'
-                on='focus-out' class='form-control'}}
-      </td>
-    </tr>
-  {{/each}}
+  {{render 'exercises' exercises}}
   </tbody>
 </table>
 

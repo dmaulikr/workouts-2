@@ -1,0 +1,19 @@
+{{#each}}
+  <tr>
+    <td>
+      <form {{action 'updateExercise' this on='submit'}}>
+        {{input value=name class='form-control'}}
+      </form>
+    </td>
+    <td>
+      <form {{action 'updateExercise' this on='submit'}}>
+        {{input value=duration class='form-control'}}
+      </form>
+    </td>
+    <td>
+      <form {{action 'updateExercise' this on='submit'}}>
+        {{input value=weight class='form-control'}}
+      </form>
+    </td>
+  </tr>
+{{/each}}
