@@ -65,13 +65,13 @@ module.exports = function(environment) {
   }
 
   if (environment === 'staging') {
-    ENV.apiUrl = 'http://owerful-brushlands-7798.herokuapp.com/api/v1';
+    ENV.apiUrl = 'https://powerful-brushlands-7798.herokuapp.com/api/v1';
     ENV.staging = true;
   }
 
 
   if (environment === 'production') {
-    ENV.apiUrl = 'http://owerful-brushlands-7798.herokuapp.com/api/v1';
+    ENV.apiUrl = 'https://powerful-brushlands-7798.herokuapp.com/api/v1';
     ENV.production = true;
   }
 
