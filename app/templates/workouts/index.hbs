@@ -1,0 +1,9 @@
+<h1>Workouts</h1>
+
+<div class='list-group'>
+  {{#each}}
+    {{#link-to 'workouts.show' this class='list-group-item'}}
+      {{name}}
+    {{/link-to}}
+  {{/each}}
+</div>

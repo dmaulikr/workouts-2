@@ -1,0 +1,16 @@
+<form class="form-inline">
+  <div class="form-group">
+    <label>Add an exercise:</label>
+
+    {{input value=newExerciseName placeholder='Name' class='form-control'}}
+
+    {{input value=newExerciseDuration placeholder='Reps or Time' class='form-control'}}
+
+    {{input value=newExerciseWeight placeholder='Weight' class='form-control'}}
+
+    <button class="btn btn-default" type="submit" {{action 'saveNewExercise' this}}>
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      Add
+    </button>
+  </div>
+</form>

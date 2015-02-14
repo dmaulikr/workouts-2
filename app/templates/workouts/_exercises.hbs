@@ -1,19 +1,31 @@
 {{#each}}
-  <tr>
-    <td>
+<tr {{action 'setIsEditing' this on='doubleClick'}}>
+  <td>
+    {{#if isEditing}}
       <form {{action 'updateExercise' this on='submit'}}>
         {{input value=name class='form-control'}}
       </form>
-    </td>
-    <td>
+    {{else}}
+      {{name}}
+    {{/if}}
+  </td>
+  <td>
+    {{#if isEditing}}
       <form {{action 'updateExercise' this on='submit'}}>
         {{input value=duration class='form-control'}}
       </form>
-    </td>
-    <td>
+    {{else}}
+      {{duration}}
+    {{/if}}
+  </td>
+  <td>
+    {{#if isEditing}}
       <form {{action 'updateExercise' this on='submit'}}>
         {{input value=weight class='form-control'}}
       </form>
-    </td>
-  </tr>
+    {{else}}
+      {{weight}}
+    {{/if}}
+  </td>
+</tr>
 {{/each}}

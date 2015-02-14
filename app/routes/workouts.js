@@ -25,6 +25,11 @@ export default Ember.Route.extend({
 
     updateExercise: function(exercise) {
       exercise.save();
+      exercise.set('isEditing', false);
+    },
+
+    setIsEditing: function(exercise) {
+      exercise.set('isEditing', true);
     }
   },
 });

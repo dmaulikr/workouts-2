@@ -1,19 +1,5 @@
 <div class='row'>
   <div class='container'>
-    <h1>Workouts</h1>
-
-    <div class='list-group'>
-      {{#each}}
-        {{#link-to 'workouts.show' this class='list-group-item'}}
-          {{name}}
-        {{/link-to}}
-      {{/each}}
-    </div>
-  </div>
-</div>
-
-<div class='row'>
-  <div class='container'>
     {{outlet}}
   </div>
 </div>
