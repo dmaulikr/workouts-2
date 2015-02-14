@@ -1,12 +1,6 @@
 import DS from 'ember-data';
 
-var Workout = DS.Model.extend({
-  name: DS.attr('string')
+export default DS.Model.extend({
+  name: DS.attr('string'),
+  exercises: DS.hasMany('exercise', { async: true })
 });
-
-Workout.reopenClass({
-  FIXTURES: [{ id: 1, name: 'Cardio' },
-             { id: 2, name: 'Core' }]
-});
-
-export default Workout;

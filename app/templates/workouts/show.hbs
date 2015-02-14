@@ -1,1 +1,31 @@
 <h1>{{name}}</h1>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Exercise</th>
+      <th>Reps / Time</th>
+      <th colspan="2">Latest Weight</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each exercises}}
+    <tr>
+      <td>{{name}}</td>
+      <td>{{duration}}</td>
+      <td colspan="2">{{weight}}</td>
+    </tr>
+  {{/each}}
+    <tr>
+      <td>input name</td>
+      <td>input duration info</td>
+      <td>input weight</td>
+      <td>
+        <button id="add-exercise" class="btn btn-default"
+                {{action 'addExercise' this}}>
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
