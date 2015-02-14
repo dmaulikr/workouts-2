@@ -6,15 +6,21 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    addExercise: function(workout) {
+    saveNewExercise: function(workout) {
+      if (workout.newExerciseName === undefined) {
+        return false;
+      }
+
       this.store.createRecord('exercise', {
-        'name': 'Goblet Squats',
-        'duration': 20,
-        'weight': 35,
-        'workout': workout
+        name: workout.newExerciseName,
+        duration: workout.newExerciseDuration,
+        weight: workout.newExerciseWeight,
+        workout: workout
       }).save();
 
-      this.transitionTo('workouts.show', workout);
+      workout.set('newExerciseName', null);
+      workout.set('newExerciseDuration', null);
+      workout.set('newExerciseWeight', null);
     }
-  }
+  },
 });

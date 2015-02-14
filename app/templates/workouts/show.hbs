@@ -5,27 +5,40 @@
     <tr>
       <th>Exercise</th>
       <th>Reps / Time</th>
-      <th colspan="2">Latest Weight</th>
+      <th>Latest Weight</th>
     </tr>
   </thead>
   <tbody>
   {{#each exercises}}
     <tr>
-      <td>{{name}}</td>
-      <td>{{duration}}</td>
-      <td colspan="2">{{weight}}</td>
-    </tr>
-  {{/each}}
-    <tr>
-      <td>input name</td>
-      <td>input duration info</td>
-      <td>input weight</td>
       <td>
-        <button id="add-exercise" class="btn btn-default"
-                {{action 'addExercise' this}}>
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-        </button>
+        {{input value=name action='updateExerciseName this' on='focus-out'
+                class='form-control'}}
+      </td>
+      <td>
+        {{input value=duration action='updateExerciseDuration this'
+                on='focus-out' class='form-control'}}
+      </td>
+      <td>
+        {{input value=weight action='updateExerciseWeight this'
+                on='focus-out' class='form-control'}}
       </td>
     </tr>
+  {{/each}}
   </tbody>
 </table>
+
+<form class="navbar-form">
+  <div class="form-group">
+    {{input value=newExerciseName placeholder='Name' class='form-control'}}
+
+    {{input value=newExerciseDuration placeholder='Reps or Time' class='form-control'}}
+
+    {{input value=newExerciseWeight placeholder='Weight' class='form-control'}}
+
+    <button class="btn btn-default" type="submit" {{action 'saveNewExercise' this}}>
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      Add
+    </button>
+  </div>
+</form>
