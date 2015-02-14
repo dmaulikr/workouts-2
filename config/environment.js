@@ -65,13 +65,13 @@ module.exports = function(environment) {
   }
 
   if (environment === 'staging') {
-    ENV.apiUrl = 'http://workouts-staging.herokuapp.com/api/v1';
+    ENV.apiUrl = 'http://owerful-brushlands-7798.herokuapp.com/api/v1';
     ENV.staging = true;
   }
 
 
   if (environment === 'production') {
-    ENV.apiUrl = 'http://workouts.herokuapp.com/api/v1';
+    ENV.apiUrl = 'http://owerful-brushlands-7798.herokuapp.com/api/v1';
     ENV.production = true;
   }
 
