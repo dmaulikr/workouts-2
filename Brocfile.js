@@ -34,4 +34,6 @@ app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.w
 app.import('bower_components/hammerjs/hammer.js');
 app.import('bower_components/ember-hammer/ember-hammer.js');
 
+app.import('bower_components/moment/moment.js');
+
 module.exports = app.toTree();
