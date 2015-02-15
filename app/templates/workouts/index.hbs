@@ -1,16 +1,7 @@
 <div class="panel-heading"><h4>Workouts</h4></div>
 
 <div class="panel-body">
-  <form class="form-inline" {{action 'save' on='submit'}}>
-    <div class="form-group">
-      {{input value=newWorkoutName placeholder='Name' class='form-control'}}
-
-      <button class="btn btn-primary" type="submit">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-        Add Workout
-      </button>
-    </div>
-  </form>
+  {{view 'workouts/new'}}
 </div>
 
 <div class='list-group'>

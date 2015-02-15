@@ -4,7 +4,7 @@ export default Ember.ArrayController.extend({
   newWorkoutName: '',
 
   actions: {
-    save: function() {
+    addWorkout: function() {
       if (!this.newWorkoutName.trim()) { return; }
       this._createWorkout();
       this.set('newWorkoutName', '');
