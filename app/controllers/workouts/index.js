@@ -7,11 +7,15 @@ export default Ember.ArrayController.extend({
     save: function() {
       if (!this.newWorkoutName.trim()) { return; }
 
-      this.store.createRecord('workout', {
-        name: this.newWorkoutName
-      }).save().then(function() {
-        this.newWorkoutName = null;
-      });
+      this._createWorkout();
+
+      this.set('newWorkoutName', '');
     }
+  },
+
+  _createWorkout: function() {
+    this.store.createRecord('workout', {
+      name: this.newWorkoutName
+    }).save();
   }
 });

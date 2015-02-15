@@ -10,17 +10,8 @@ export default Ember.ObjectController.extend({
   actions: {
     saveNewExercise: function() {
       if(!this.newExerciseName.trim()) { return false; }
-
-      this.store.createRecord('exercise', {
-        name: this.newExerciseName,
-        duration: this.newExerciseDuration,
-        weight: this.newExerciseWeight,
-        workout: this.model
-      }).save();
-
-      this.set('newExerciseName', '');
-      this.set('newExerciseDuration', '');
-      this.set('newExerciseWeight', '');
+      this._createExercise();
+      this._resetExerciseFields();
     },
 
     updateExercise: function(exercise) {
@@ -32,4 +23,19 @@ export default Ember.ObjectController.extend({
       exercise.set('isEditing', true);
     }
   },
+
+  _createExercise: function() {
+    this.store.createRecord('exercise', {
+      name: this.newExerciseName,
+      duration: this.newExerciseDuration,
+      weight: this.newExerciseWeight,
+      workout: this.model
+    }).save();
+  },
+
+  _resetExerciseFields: function() {
+    this.set('newExerciseName', '');
+    this.set('newExerciseDuration', '');
+    this.set('newExerciseWeight', '');
+  }
 });
