@@ -1,25 +1,28 @@
-<div class="panel-heading">
-  <h4>
-    {{#link-to 'workouts.index'}}Workouts{{/link-to}}:
-    {{name}}
-  </h4>
-</div>
+<header class="bar bar-nav">
+  <button class="btn btn-link btn-nav pull-left" {{action 'back' on='click'}}>
+    <span class="icon icon-left-nav"></span>
+    Workouts
+  </button>
+  <h1 class="title">{{name}}</h1>
+</header>
 
-<div class="panel-body">
-  {{render 'exercises/new' this}}
-</div>
+<div class='panel panel-default'>
+  <div class='panel-heading'>
+    {{render 'exercises/new' this}}
+  </div>
 
-<table class="table table-striped table-hover">
-  <thead>
-    <tr>
-      <th>Exercise</th>
-      <th>Reps / Time</th>
-      <th>Latest Weight</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each exercises}}
-      {{view 'exercises/exercise'}}
-    {{/each}}
-  </tbody>
-</table>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Exercise</th>
+        <th>Reps / Time</th>
+        <th>Latest Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each exercises}}
+        {{view 'exercises/exercise'}}
+      {{/each}}
+    </tbody>
+  </table>
+</div>
