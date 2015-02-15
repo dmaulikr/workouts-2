@@ -1,5 +1,5 @@
 {{#each}}
-<tr {{action 'setIsEditing' this on='doubleClick'}}>
+<tr {{action 'editExercise' this on='doubleClick'}}>
   <td>
     {{#if isEditing}}
       <form {{action 'updateExercise' this on='submit'}}>
