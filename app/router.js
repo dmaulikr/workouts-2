@@ -9,6 +9,7 @@ Router.map(function() {
   this.resource('workouts', function() {
     this.route('show', { path: '/:workout_id' });
   });
+  this.route('today');
 });
 
 export default Router;
