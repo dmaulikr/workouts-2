@@ -1,6 +1,13 @@
-<h1>{{name}}</h1>
+<div class="panel-heading">
+  <h4>
+    {{link-to 'Workouts' 'workouts'}}:
+    {{name}}
+  </h4>
+</div>
 
-{{render 'workouts/_new_exercise' this}}
+<div class="panel-body">
+  {{render 'workouts/_new_exercise' this}}
+</div>
 
 <table class="table table-striped table-hover">
   <thead>
