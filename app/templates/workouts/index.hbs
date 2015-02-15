@@ -2,18 +2,20 @@
   <h1 class="title">Workouts</h1>
 </header>
 
-<div class='panel panel-default'>
-  <div class='panel-heading'>
-    {{view 'workouts/new'}}
-  </div>
+<div class='content'>
+  <div class='panel panel-default'>
+    <div class='panel-heading'>
+      {{view 'workouts/new'}}
+    </div>
 
-  <ul class='table-view'>
-    {{#each}}
-      <li class='table-view-cell'>
-        {{#link-to 'workouts.show' this class='navigate-right'}}
-          {{name}}
-        {{/link-to}}
-      </li>
-    {{/each}}
-  </ul>
+    <ul class='table-view'>
+      {{#each}}
+        <li class='table-view-cell'>
+          {{#link-to 'workouts.show' this class='navigate-right'}}
+            {{name}}
+          {{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </div>

@@ -43,7 +43,6 @@ body {
 .panel {
   border-radius: 0;
   box-shadow: none;
-  padding-top: 44px;
   .form-group, .table {
     input, button {
       margin-bottom: 0;
@@ -52,4 +51,8 @@ body {
   .table-view {
     margin-bottom: 0;
   }
+}
+
+a.btn-nav:hover {
+  text-decoration: none;
 }
