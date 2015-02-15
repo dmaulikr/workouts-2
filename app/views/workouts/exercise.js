@@ -9,7 +9,7 @@ export default Ember.View.extend({
   tagName: 'tr',
 
   doubleClick: function() {
-    this._toggleEdit();
+    this.enableEdit();
   },
 
   hammerOptions: {
@@ -18,7 +18,7 @@ export default Ember.View.extend({
 
   gestures: {
     tap: function() {
-      this._toggleEdit();
+      this.enableEdit();
       return false;
     }
   },
@@ -27,7 +27,7 @@ export default Ember.View.extend({
     this.set('isEditing', false);
   },
 
-  _toggleEdit: function() {
-    this.set('isEditing', !this.isEditing);
+  enableEdit: function() {
+    this.set('isEditing', true);
   }
 });
