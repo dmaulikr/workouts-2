@@ -18,6 +18,8 @@
     </tr>
   </thead>
   <tbody>
-    {{render 'workouts/_exercises' exercises}}
+    {{#each exercises}}
+      {{view 'workouts/exercise'}}
+    {{/each}}
   </tbody>
 </table>

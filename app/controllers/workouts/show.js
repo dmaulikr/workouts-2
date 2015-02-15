@@ -14,13 +14,9 @@ export default Ember.ObjectController.extend({
       this._resetExerciseFields();
     },
 
-    updateExercise: function(exercise) {
+    updateExercise: function(exercise, view) {
       exercise.save();
-      exercise.set('isEditing', false);
-    },
-
-    editExercise: function(exercise) {
-      exercise.set('isEditing', true);
+      view.disableEdit();
     }
   },
 

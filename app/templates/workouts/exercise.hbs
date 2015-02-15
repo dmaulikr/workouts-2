@@ -1,0 +1,29 @@
+<td>
+  {{#if view.isEditing}}
+    <form {{action 'updateExercise' this view on='submit'}}>
+      {{input value=name class='form-control'}}
+    </form>
+  {{else}}
+    {{name}}
+  {{/if}}
+</td>
+
+<td>
+  {{#if view.isEditing}}
+    <form {{action 'updateExercise' this view on='submit'}}>
+      {{input value=duration class='form-control'}}
+    </form>
+  {{else}}
+    {{duration}}
+  {{/if}}
+</td>
+
+<td>
+  {{#if view.isEditing}}
+    <form {{action 'updateExercise' this view on='submit'}}>
+      {{input value=weight class='form-control'}}
+    </form>
+  {{else}}
+    {{weight}}
+  {{/if}}
+</td>
