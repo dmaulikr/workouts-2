@@ -1,16 +1,14 @@
-<form class="form-inline">
+<form class="form-inline" {{action 'saveNewExercise' this on='submit'}}>
   <div class="form-group">
-    <label>Add an exercise:</label>
-
     {{input value=newExerciseName placeholder='Name' class='form-control'}}
 
     {{input value=newExerciseDuration placeholder='Reps or Time' class='form-control'}}
 
     {{input value=newExerciseWeight placeholder='Weight' class='form-control'}}
 
-    <button class="btn btn-default" type="submit" {{action 'saveNewExercise' this}}>
+    <button class="btn btn-default" type="submit">
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-      Add
+      Add Exercise
     </button>
   </div>
 </form>
