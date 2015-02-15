@@ -6,7 +6,7 @@
 </div>
 
 <div class="panel-body">
-  {{render 'workouts/_new_exercise' this}}
+  {{render 'exercises/new' this}}
 </div>
 
 <table class="table table-striped table-hover">
@@ -19,7 +19,7 @@
   </thead>
   <tbody>
     {{#each exercises}}
-      {{view 'workouts/exercise'}}
+      {{view 'exercises/exercise'}}
     {{/each}}
   </tbody>
 </table>

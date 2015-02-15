@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import ExerciseTmpl from '../../templates/workouts/exercise';
+import ExerciseTmpl from '../../templates/exercises/exercise';
 
 export default Ember.View.extend({
   isEditing: false,
