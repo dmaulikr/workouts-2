@@ -25,4 +25,7 @@ app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.s
 app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', { destDir: 'fonts' });
 app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2', { destDir: 'fonts' });
 
+app.import('bower_components/hammerjs/hammer.js');
+app.import('bower_components/ember-hammer/ember-hammer.js');
+
 module.exports = app.toTree();
