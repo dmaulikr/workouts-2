@@ -37,6 +37,7 @@
     "ember-export-application-global": "^1.0.2",
     "express": "^4.8.5",
     "glob": "^4.0.5",
-    "liquid-fire": "^0.16.3"
+    "liquid-fire": "^0.16.3",
+    "newrelic": "^1.16.2"
   }
 }
