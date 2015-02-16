@@ -3,9 +3,10 @@ function formatDate(date, format) {
   return window.moment(date).format(format);
 }
 
-function currentDate(format) {
-  if (format === undefined) { format = 'dddd, MMM Do'; }
-  return formatDate(new Date(), format);
+function currentDate(options) {
+  options = options || {};
+  if (options.format === undefined) { options.format = 'dddd, MMM Do'; }
+  return formatDate(new Date(), options.format);
 }
 
 export default {

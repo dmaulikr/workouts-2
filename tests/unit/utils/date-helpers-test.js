@@ -17,5 +17,5 @@ test('returns current date formatted nicely', function(assert) {
   assert.equal(dateHelpers.currentDate(), window.moment().format('dddd, MMM Do'));
 
   // explicit format
-  assert.equal(dateHelpers.currentDate('LL'), window.moment().format('LL'));
+  assert.equal(dateHelpers.currentDate({ format: 'LL' }), window.moment().format('LL'));
 });
