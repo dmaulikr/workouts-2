@@ -10,5 +10,5 @@ moduleFor('controller:today', {
 test('sets the title to a nicely formated today', function(assert) {
   var controller = this.subject();
 
-  assert.equal(controller.title, window.moment().format('dddd, MMM Do'));
+  assert.equal(controller.title, window.moment().format('dddd'));
 });
