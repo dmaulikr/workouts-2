@@ -19,3 +19,19 @@ test('returns current date formatted nicely', function(assert) {
   // explicit format
   assert.equal(dateHelpers.currentDate({ format: 'LL' }), window.moment().format('LL'));
 });
+
+test('returns nextDay based off date passed in', function(assert) {
+  var today = new Date(),
+      tomorrow = window.moment(today).add(1, 'days'),
+      expected = window.moment(tomorrow).format('dddd');
+
+  assert.equal(dateHelpers.nextDay(today), expected.toLowerCase());
+});
+
+test('returns prevDay based off date passed in', function(assert) {
+  var today = new Date(),
+      yesterday = window.moment(today).subtract(1, 'days'),
+      expected = window.moment(yesterday).format('dddd');
+
+  assert.equal(dateHelpers.prevDay(today), expected.toLowerCase());
+});

@@ -9,7 +9,24 @@ function currentDate(options) {
   return formatDate(new Date(), options.format);
 }
 
+function nextDay(date) {
+  return _dayNameFromTimeTravel('add', 1, 'days', date);
+}
+
+function prevDay(date) {
+  return _dayNameFromTimeTravel('subtract', 1, 'days', date);
+}
+
+function _dayNameFromTimeTravel(direction, number, period, date) {
+  var traveled = window.moment(date)[direction](1, 'days'),
+      dayName = traveled.format('dddd');
+
+  return dayName.toLowerCase();
+}
+
 export default {
   formatDate,
-  currentDate
+  currentDate,
+  nextDay,
+  prevDay
 };

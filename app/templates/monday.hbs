@@ -1,0 +1,15 @@
+<header class="bar bar-nav">
+  {{#link-to 'sunday' class="btn btn-nav btn-link pull-left"}}
+    <span class="icon icon-left-nav"></span> sunday
+  {{/link-to}}
+
+  {{#link-to 'tuesday' class="btn btn-nav btn-link pull-right"}}
+    tuesday <span class="icon icon-right-nav"></span>
+  {{/link-to}}
+
+  <h1 class="title">Monday</h1>
+</header>
+
+<div class="content">
+  {{outlet}}
+</div>

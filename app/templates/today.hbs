@@ -1,5 +1,13 @@
 <header class="bar bar-nav">
-  <h1 class="title">{{title}}</h1>
+  {{#link-to prevDay class="btn btn-nav btn-link pull-left"}}
+    <span class="icon icon-left-nav"></span> {{prevDay}}
+  {{/link-to}}
+
+  {{#link-to nextDay class="btn btn-nav btn-link pull-right"}}
+    {{nextDay}} <span class="icon icon-right-nav"></span>
+  {{/link-to}}
+
+  <h1 class="title">{{currentDay}}</h1>
 </header>
 
 <div class="content">
