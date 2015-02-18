@@ -6,5 +6,9 @@ export default Ember.Controller.extend({
 
   nextDay: dateHelpers.nextDay(new Date()),
 
-  prevDay: dateHelpers.prevDay(new Date())
+  prevDay: dateHelpers.prevDay(new Date()),
+
+  assignedWorkouts: [{ name: 'Assigned' }],
+
+  otherWorkouts: [{ name: 'Other' }],
 });

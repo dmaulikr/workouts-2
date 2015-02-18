@@ -11,5 +11,27 @@
 </header>
 
 <div class="content">
-  {{outlet}}
+  <div>
+    <ul class='table-view'>
+      {{#each assignedWorkouts}}
+        <li class='table-view-cell'>
+          {{name}}
+          <div class="toggle active">
+            <div class="toggle-handle"></div>
+          </div>
+        </li>
+      {{/each}}
+
+      <li class='table-view-divider'>Other workouts</li>
+
+      {{#each otherWorkouts}}
+        <li class='table-view-cell'>
+          {{name}}
+          <div class="toggle">
+            <div class="toggle-handle"></div>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </div>
